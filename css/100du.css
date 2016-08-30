@@ -1,0 +1,952 @@
+/*样式重置*/
+body,h1,h2,h3,h4,p,dl,dd,ul,ol,form,input,textarea,th,td,select{margin: 0;padding: 0;}
+em{font-style: normal;}/*强调标签em,重置为正常*/
+li{list-style: none;}
+/*a标签重置不要下划线*/
+a{text-decoration: none;}
+/*a链接属性的初始化*/
+a:visited{color: inherit;}
+a:active{color: inherit;}
+a:link{color: inherit;}
+img{border: none;vertical-align: top;}/*边框合并为一个单一的边框*/
+table{border-collapse: collapse;}/*去除输入框边框*/
+input,textarea{outline: none;}
+textarea{resize:none;overflow: auto;}
+body{font-size:12px;font-family: arial;}/*初始化字体*/
+.float_l{float: left;}
+.float_r{float: right;}
+
+/*margin是不会继承的,所以不用担心它*/
+/*.block_center{margin: 0 auto;}*/
+
+/*这句不太好用,但还是有人用了*/
+.border_grey{border: 1px solid #e5e5e5;}
+.border_open{
+	border-top: 0px solid white;
+	border-right: 1px solid #e5e5e5;
+	border-left: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+}
+/*圆角*/  /*圆角和边框还是分开写*/
+.border_up{border-radius: 10px 10px 0 0;}
+.border_bottom{border-radius: 0 0 10px 10px;}
+.dotup_red{
+	border-top: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	border-bottom: 5px solid #ca0309;
+	display: inline-block;
+}
+.dotdown_red{
+	border-top: 5px solid #ca0309;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	display: inline-block;
+}
+.dotdown_grey{
+	border-top: 5px solid #c1c1c1;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	display: inline-block;
+}
+.fontredtop{
+	color: #cc0d13;
+	font-weight: bold;
+	/*这个line-height影响了整个块的显示高度*/
+	/*line-height: 18px; */
+}
+.fontblacktop{
+	color: #2b2d2d;
+	/*这个line-height影响了整个块的显示高度*/
+	/*line-height: 18px;*/
+	font-size: 14px;
+	font-weight: bold;
+}
+.fontnew{
+	color: #666666;
+	font-weight: bold;
+	/*line-height: 18px; */
+}
+/*more信息都是浮动在右边的,不管是上边还是下边*/
+.more{float: right;}
+
+/*中间空白线*/
+.blanket{width: 100px;height: 10px;clear: both;}
+
+.wrap{
+	width: 960px;
+	margin: 0 auto;
+}
+/*顶部栏*/
+.header_top{
+	height: 30px;
+    background: linear-gradient(#FFF,#FAFAFA);
+}
+	/*行高设置*/
+.hotcity span{
+	line-height: 30px;
+}
+.hotcity a{
+	display: inline-block;
+	border: 1px solid #e5e5e5;
+	color: #999999;
+	width: 39px;
+	height: 18px;
+	line-height: 18px;
+	border-radius: 3px;
+	text-align: center;	
+}
+.hotcity a:hover{
+	color: red;
+	font-weight: bold;
+}
+.union a{
+	/*这是什么?当初为会写一个inline-block出来???*/
+	/*display: inline-block;*/
+	line-height: 30px;
+	color: #666666;
+}
+	/*又一发现:类名不能用数字开头*/
+.union .hundred{
+	background: url(../pic/100.png) 0 0 no-repeat;
+	padding-left: 20px;
+}
+.union .manage{
+	background: url(../pic/manage.png) 0 0 no-repeat;
+	padding-left: 19px;
+}
+/*中部导航栏*/
+.header_middle{
+	padding: 10px 0px;
+}
+.header_middle a{
+	display: inline-block;
+	width: 48px;
+	/*a的高度,没有要求,因为有padding撑着*/
+	height: 12px;	
+	text-align: center;
+	padding-top: 50px;
+	margin: 0px 9px;
+}
+.header_middle a.right{
+	/*display: inline-block;*/
+	width: 60px;
+    height: 12px;
+    text-align: center;
+    padding-top: 50px;
+    margin: 0px 4px;
+    background-position: 6px 0px;
+}
+/*中部图片设置*/
+.header_middle .pig{
+	background: url(../pic/food.png) no-repeat;
+}
+.header_middle .night{
+	background: url(../pic/song.png) no-repeat;
+}
+.header_middle .shop{
+	background: url(../pic/shop.png) no-repeat;
+}
+.header_middle .culture{
+	background: url(../pic/culture.png) no-repeat;
+}
+.header_middle .leisure{
+	background: url(../pic/leisure.png) no-repeat;
+}
+/*伪类*/
+.header_middle .pig:hover{
+	background: url(../pic/food-click.png) no-repeat;
+}
+.header_middle .night:hover{
+	background: url(../pic/song-click.png) no-repeat;
+}
+.header_middle .shop:hover{
+	background: url(../pic/shop-click.png) no-repeat;
+}
+.header_middle .culture:hover{
+	background: url(../pic/culture-click.png) no-repeat;
+}
+.header_middle .leisure:hover{
+	background: url(../pic/leisure-click.png) no-repeat;
+}
+.header_middle .right:hover{
+	background: url(../pic/leisure-click.png) no-repeat;
+	background-position: 6px 0px;
+}
+.header_middle h1{
+	display: inline-block;
+	/*让图片跟前面的a的顶部对齐*/
+	vertical-align: top;
+	margin: 0px 20px;
+}
+
+.header_foot .wrap{
+	height: 114px;
+	border-radius: 10px;
+	margin-top: 17px;
+	margin-bottom: 10px;
+	/*给子元素定位作参考*/
+	position: relative;
+}
+.header_foot .wrap .search{
+	height: 66px;
+	background-color: red;
+	border-radius: 10px;
+	margin-top: 16px;
+}
+.header_foot nav{
+	margin-left: 227px;
+}
+.header_foot nav a{
+	float: left;
+	width: 78px;
+	height: 24px;
+	border: 1px solid #e5e5e5;
+	font-size: 14px;
+	/*使文本居中*/
+	line-height: 26px;
+	text-align: center;
+	margin-top: -10px;
+	margin-right: 1px;
+	background: white;
+}
+/*a的伪类*/
+.header_foot nav a:hover{
+	background: red;
+	color: white;
+	border-bottom: 1px solid red;
+}
+.header_foot input[type=text]{
+	width: 400px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 226px;
+    border-radius: 8px;
+}
+.header_foot input[type=submit]{
+	border: 0;
+    width: 63px;
+    height: 26px;
+    border-radius: 11px;
+    margin-left: 10px;
+    background: url(../pic/search.png) no-repeat;
+}
+.header_foot .search ul{
+	margin-top: -29px;
+    margin-right: 24px;
+}
+.header_foot .search ul li{
+	color: white;
+	line-height: 18px;
+}
+.header_foot .note{
+	display: inline-block;
+	/*背景图不显示首先确认路径有没有错误！！*/
+	background: url(../pic/update.png) no-repeat;
+	padding-left: 60px;
+	width: 340px;
+	margin: 10px 0px 10px 226px;
+}
+/*层次关系搞清楚,a是在warp的下一级,而不是header_food的下一级*/
+/*直接在dotdown_red类中增加了display:inline-block,此处可以删除*/
+/*.header_foot .wrap>a{
+	display: inline-block;
+}*/
+.header_foot .wrap .up{
+	/*红三角相对位移*/
+	position: relative;
+	top: -10px;
+	right: 19px;
+}
+.header_foot .wrap .down{
+	/*红三角相对位移*/
+	position: relative;
+	top: 8px;
+    right: 6px;
+}
+.header_foot .wrap>img{
+	position: absolute;
+	top: -5px;
+    left: 32px;
+}
+.content .con_l{
+	width: 710px;
+	float: left;
+}
+.content .con_l .whot{
+	float: left;
+	padding: 10px 15px;
+	border: 1px solid #e5e5e5;
+	border-radius: 10px;
+	margin-right: 10px;
+}
+/*如果是在下一级的,最好用子代选择器,后代选择器杀伤力太大了*/
+.content .con_l .whot>span{
+    display: inline-block;
+    line-height: 23px;
+    width: 141px;
+    font-size: 18px;
+    color: #d90000;
+	background: url(../pic/right-j.png) 118px 0 no-repeat;
+	margin-bottom: 9px;
+}
+.content .con_l .whot>.dog{
+	margin-bottom: 15px;
+}
+.content .con_l .whot>ul{
+	background: url(../pic/Vhot.png)no-repeat;
+	padding-left: 95px;
+	height: 66px;
+}
+.content .con_l .whot>ul>li{
+	list-style: square;
+	/*这样会影响到文字,所以可以给文字加一个span*/
+	/*给一个a会更加合理,因为这里肯定是一个链接*/
+	color: red;
+	line-height: 20px;
+}
+.content .con_l .whot>ul>li>a{
+	color: #4d4d4d;
+	/*拉近a和列表点之间的距离*/
+	margin-left: -9px;
+}
+
+
+/*红店*/
+.content .con_l .hotshop{
+	width: 350px;
+	/*overflow: hidden在这里有什么用*/
+	/*清除子元素浮动的影响*/
+	overflow: hidden;
+}
+
+/*为什么这样也会影响到a里面的a?*/
+/*因为a里面套a,浏览器并不认为他们是嵌套关系,而是解析为了并列关系*/
+/*所以a里面不能套a*/
+.content .con_l .hotshop>a{
+	display: inline-block;
+	width: 172px;
+	height: 33px;
+	line-height: 33px;
+	text-align: center;
+	border: 1px solid #e5e5e5;
+} 
+.content .con_l .hotshop>.new{
+	margin-left: 2px;
+}
+
+.content .con_l .hotshop .shop_wrap{
+	/*float好像没啥用*/
+	float: left;
+	padding: 15px;
+	height: 354px;
+}
+.content .con_l .hotshop .shop_wrap>.pic_block{
+	display: block;
+	width: 318px;
+	margin-bottom: 28px;
+	background-color: #f5f5f5;
+	/*给子元素绝对定位作参考*/
+	position: relative;
+}
+.content .con_l .hotshop .shop_wrap dl{
+	display: inline-block;
+	margin-left: 20px;
+}
+.content .con_l .hotshop .shop_wrap dt{
+	line-height: 24px;
+	color: red;
+}
+.content .con_l .hotshop .shop_wrap dd{line-height: 16px;}
+.content .con_l .hotshop .shop_wrap>a>.hot{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.content .con_l .hotshop .shop_wrap>a>.save{
+	position: absolute;
+    bottom: -10px;
+    left: 70px;
+}
+
+/*每天活动*/
+.luckyday{
+	float: left;
+	/*是什么导致这里需要改变？？原来是306px*/
+	width: 308px;
+	border: 1px solid #e5e5e5;
+	border-radius: 10px;
+	padding: 20px;
+	/*给子元素作参考*/
+	position: relative;
+	margin-right: 10px;
+}
+
+.luckyday>h1{
+	margin-bottom: 7px;
+}
+
+.luckyday>.time{
+	position: absolute;
+	top: 20px;
+	left: 128px;
+	font-size: 36px;
+	color: red;
+}
+.luckyday>dl{
+	background: url(../pic/highheel.png) 0 14px no-repeat;
+	padding-left: 100px;
+	padding-top: 14px;
+	border-top: 1px solid #e5e5e5;
+}
+.luckyday>dl>dt>span{
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 14px;
+	color: #cf1812;
+	padding: 5px;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	margin-right: 5px;
+}
+.luckyday>dl>dd{
+	line-height: 18px;
+	margin-top: 5px;
+}
+.luckyday>table{
+	margin-top: 21px;
+}
+
+.luckyday>table th{
+	width: 40px;
+	height: 30px;
+}
+.luckyday>table td{
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-weight: bold;
+	color: #666666;
+	background-color: #ededed;
+	border-bottom: 2px solid white;
+	border-left: 3px solid white;
+}
+.luckyday>table .next,.luckyday>table .last{
+	color: #cccccc;
+	background-color: #f8f8f8;
+}
+.luckyday>table .today{
+	background: url(../pic/today.png) no-repeat;
+}
+.luckyday>table .subject:hover{
+	background: url(../pic/subject.png) no-repeat;
+} 
+.luckyday>img{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.luckyday>table .subject>a{
+	position: absolute;
+	top: 312px;
+    right: -220px;
+    display: none;
+    z-index: 200;
+}
+.luckyday>table .subject:hover a{
+	display: inline-block;
+}
+/*推荐*/
+.recommend{
+	float: left;
+	width: 308px;
+	border: 1px solid #e5e5e5;
+	border-radius: 10px;
+	padding: 20px 20px 13px 20px;
+	/*给子元素作参考*/
+	position: relative;
+}
+.recommend>h1{margin-bottom: 7px;}
+.recommend>img{
+	position: absolute;
+	top: 0;
+	left: 116px;
+}
+.recommend>.notice>li{
+	line-height: 27px;
+	background: url(../pic/shopcar.png) 0 6px no-repeat;
+	padding-left: 22px;
+}
+.recommend>.notice>li>a{
+	border-left: 1px solid #e5e5e5;
+	padding-left: 5px;
+}
+.recommend>.time>li{
+	line-height: 27px;
+	color: #999999;
+}
+.recommend>.hotpic{
+	display: inline-block;
+	padding: 10px;
+	width: 296px;
+	height: 160px;
+	margin-left: -5px;
+	background-color: #f8f8f8;
+	margin-bottom: 14px;
+}
+.recommend>.hotpic>.map>li{margin-bottom: 13px;}
+.recommend>.hotpic>p{
+	margin-top: 10px;
+}
+
+/*由于lukcyday和recommend浮动,影响了ads2块,这里需要加清除浮动影响的语句*/
+.ads1,.ads2{
+	margin: 10px 10px 10px 0px;
+	/*clear: both;*//*无效??清除浮动还是有效的,但是其上的margin-top没有起作用??*/
+	/*实验上看：虽然清除了上面块对其浮动的影响,但是对于ads2来说,上门的块还是飘起来的,所以margin-top往上顶时顶不到东西*/
+	/*还是有点说不通,如何解释inline-block没有飞到上门去呢？*/
+	/*因为inline元素会围绕浮动元素显示,且上门没有足够空间让它上去!*/
+	display: inline-block; /*解决了*/
+}
+
+/*subway*/
+.subway{
+	width: 350px;
+	/*如果不float,那么subway还是块元素,还是占据一行的,那么后面的元素上不来*/
+	float: left;
+}
+.subway>a{
+	display: inline-block;
+	width: 172px;
+	height: 33px;
+	line-height: 33px;
+	text-align: center;
+	border: 1px solid #e5e5e5;
+}
+.subway>.map{margin-left: 2px;}
+.subway>.map_wrap{
+	padding-top: 21px;
+	padding-left: 21px;
+	padding-bottom: 21px;
+	/*消除子元素浮动后飘出div的影响*/
+	overflow: hidden;
+}
+.subway>.map_wrap img{
+	margin-top: 5px;
+	margin-left: 4px;
+	margin-bottom: 21px;
+}
+.subway>.map_wrap>a{
+	float: left;
+	width: 53px;
+	height: 23px;
+	line-height: 23px;
+	text-align: center;
+	border: 2px solid red;
+	border-radius: 5px;
+	margin-left: 5px;
+}
+.subway>.map_wrap>a>span{
+	font-weight: bold;
+}
+
+/*bbs*/
+.bbs{
+	float: left;
+	/*是什么导致这里变了,原来是316px*/
+	width: 318px;
+	border: 1px solid #e5e5e5;
+	border-radius: 10px;
+	/*页眉文字的line-height影响了实际的间距值*/
+	/*而且应该量最高的那个值,不应该量BBC*/
+	padding: 14px;
+	/*给子元素作参考,在这里冗余了*/
+	/*position: relative;*/
+	margin-left: 10px;
+}
+.bbs>ul>li{
+	height: 30px;
+	line-height: 30px;
+	border-radius: 10px;
+	background-color: #f1f1f1;
+	margin: 3px auto;
+}
+.bbs>ul>li .num{
+	color: red;
+	font-weight: bold;
+	font-size: 14px;
+	margin-left: 10px;
+	margin-right: 20px;
+}
+.bbs>ul>li .item{
+	color: #666666;
+	margin-left: 85px;
+	margin-right: 22px;
+}
+.bbs>a.one>img{
+	/*为什么设置16px后,实际间距变成了21px;*/
+	/*margin-top: 16px;*/
+	/*为什么设成8px就可以了*/
+	/*怀疑原因：可能是上文的line-height影响了？那为什么要从16px减到8px那么多?*/
+	/*通过审查元素不断删减各属性来找原因*/
+	/*还是未找到原因,改了line-height这里还是会相差很大*/
+	margin-top: 13px;
+
+}
+
+/*知道分子*/
+.advice{
+	float: left;
+	width: 318px;
+	border: 1px solid #e5e5e5;
+	border-radius: 10px;
+	/*为什么这里设置15px会导致padding-top为16px??*/
+	padding: 15px;
+	margin-right: 10px;
+}
+.advice>.ask{
+	margin-left: 10px;
+	margin-top: 9px;
+}
+/*如何使列表下面的边框能包住列表前面的点*/
+.advice>.ask>a{
+	display: inline-block;
+	width: 98px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	border: 1px solid #e5e5e5;
+}
+.advice>ul>li{
+	list-style: square;
+	color: red;
+	height: 27px;
+	line-height: 27px;
+	border-bottom: 1px dotted #cbcbca;
+	background: url(../pic/right.png) 285px 11px no-repeat;
+	margin-left: 10px;
+}
+.advice>ul>li>a{color: #454545;}
+
+.advice>p.askp{
+    height: 30px;
+    line-height: 37px;
+	border-bottom: 1px dotted #cbcbca;
+	border-top: 1px solid #e5e5e5;
+	margin-top: -1px;
+}
+.advice>p.askp>.title{
+	color: #666;
+	margin-left: 116px;
+}
+.advice>p.askp>.kind{
+	color: #666;
+	margin-left: 121px;
+}
+.advice form{
+	width: 100%;
+	height: 20px;
+	margin-top: 17px;
+	margin-bottom: 9px;
+	text-align: center;
+}
+.advice input[type=text]{
+	width: 180px;
+	height: 20px;
+}
+.advice input[type=submit]{
+	border: 0;
+	width: 22px;
+	height: 22px;
+	background: url(../pic/go.png) no-repeat;
+}
+
+/*红人烧客*/
+.hotfellow{
+	float: left;
+	width: 318px;
+	padding: 15px;
+	border: 1px solid #e5e5e5;
+	border-radius: 10px;
+}
+.hotfellow>div>ul{
+	width: 58px;
+	height: 58px;
+	background-color: red;
+	padding: 10px;
+	float: left;
+	margin-right: 2px;
+}
+.hotfellow>div>img{
+	float: left;
+	margin-right: 2px;
+	margin-bottom: 2px;
+}
+.hotfellow>div>.text{
+	float: left;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	position: relative;
+}
+.hotfellow>div>.text>ul{
+	background-color: rgba(0,0,0,0.5);
+	width: 132px;
+	height: 54px;
+	padding: 12px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none
+}
+.hotfellow>div>.text:hover ul{
+	display: block;
+}
+.hotfellow>div>.text>ul>li{
+	color: white;
+	line-height: 18px;
+}
+.hotfellow>div{
+	margin-top: 9px;
+	margin-bottom: 3px;
+	overflow: hidden;
+}
+.hotfellow>div>ul>li{
+	color: white;
+	line-height: 18px;
+}
+.hotfellow>div>ul>li.hot{
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+/*在线帮助*/
+.help{
+	float: left;
+	width: 318px;
+	padding: 15px;
+	border: 1px solid #e5e5e5;
+	border-radius: 10px;
+	margin-right: 10px;
+}
+.help>p.up{
+	text-indent: 2em;
+	margin-top: 25px;
+	/*用p的padding-bottom来支撑下方空间*/
+	padding-bottom: 46px;
+	padding-left: 5px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.help>p.up>span:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+.help>p.up>em{
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: bold;
+	color: red;
+	/*为什么float-left之后文本向右跳？*/	
+	float: left;
+	background: url(../pic/phone.png) no-repeat;
+}
+.help>p.up>i{
+	margin-top: 10px;
+	/*这里也是,float之后文本向右跳？*/
+	float: right;
+	background: url(../pic/MSN.png) no-repeat;
+}
+.help>.down{
+	overflow: hidden;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.help>.down>.first{
+	float: left;
+	padding-left: 10px;
+}
+.help>.down>.second{
+	float: right;
+}
+.help>.down dt{
+	font-weight: bold;
+	line-height: 18px;
+}
+.help>.down dd{
+	line-height: 20px;
+}
+
+/*媒体声音*/
+.media{
+	float: left;
+	width: 318px;
+	padding: 15px;
+	border: 1px solid #e5e5e5;
+	border-radius: 10px;
+}
+.media>ul>li{
+	line-height: 18px;
+}
+.media>ul>li.li1{
+	background: url(../pic/japan.png) no-repeat;
+	padding-left: 100px;
+	margin-top: 22px;
+}
+.media>ul>li.li2{
+	margin-top: 12px;
+	background: url(../pic/japan-2.png) no-repeat;
+	padding-left: 100px;
+	padding-top: 11px;
+}
+.media>ul>li.li3{
+	margin-top: 20px;
+	background: url(../pic/funtime.png) no-repeat;
+	padding-left: 100px;
+}
+.media>ul>li.li4{
+	margin-top: 15px;
+	background: url(../pic/internet.png) no-repeat;
+	padding-left: 100px;
+	padding-top: 10px;
+	margin-bottom: 28px;
+}
+
+/*登录*/
+.con_r>.load{
+	float: left;
+	overflow: hidden;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.con_r>.load>a{
+	display: inline-block;
+	width: 226px;
+	height: 34px;
+	line-height: 34px;
+	padding-left: 12px;
+	border: 1px solid #e5e5e5; 
+}
+.con_r>.load form{
+	padding-left: 8px;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #e5e5e5; 
+}
+.con_r>.load input[type=text]{
+	width: 89px;
+	height: 15px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+.con_r>.load input[type=password]{
+	width: 89px;
+	height: 15px; 
+	margin-right: 5px;
+}
+.con_r>.load .pass{
+	margin-left: 2px;
+}
+.con_r>.load input[type=submit]{
+	border: 0;
+	width: 56px;
+	height: 26px;
+	background: url(../pic/login.png) no-repeat;
+}
+.con_r>.load>.wrap_load{
+	padding: 12px;
+	overflow: hidden;
+}
+.con_r>.load>.wrap_load>ul{
+	overflow: hidden;
+	margin-left: 12px;
+}
+.con_r>.load>.wrap_load>ul>li{
+	float: left;
+	list-style: square;
+	color: red;
+	margin: 8px 20px 0px;
+}
+.con_r>.load>.wrap_load>ul>li span{
+	color: #666;
+	margin-left: -8px;
+}
+
+/*ad3*/
+.ad3{
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+/*ad4*/
+.ad4{
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.coupons{
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.shoptoday{
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+/*类名不能以数字开头*/
+/*.360shop{*/
+.shop360{
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.outlet{
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.newest{
+	float: left;
+	margin-left: 10px;
+}
+
+/*footer*/
+.footer{
+	clear: both;
+	width: 938px;
+	border: 1px solid #e5e5e5;
+	border-radius: 10px;
+	overflow: hidden;
+	text-align: center;
+	padding: 10px;
+	background-color: #f9f9f9;
+}
+.footer>ul{
+	overflow: hidden;
+	margin-left: 215px;
+}
+.footer>ul>li{
+	float: left;
+	margin:11px 0px;
+	padding: 0 10px;
+}
+.footer>ul>li.border{
+	border-right: 1px solid #919191;
+}
+		
+.footer>p{
+	clear: both;
+	margin-bottom: 8px;
+}	
